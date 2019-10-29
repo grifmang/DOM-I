@@ -47,15 +47,26 @@ let count = 1;
 navLinks.forEach( element => {
   if (count !== navLinks.length + 1) {
     element.textContent = siteContent['nav'][`nav-item-${count}`];
+    element.style.color = 'green';
     count += 1;
   }
 })
+
+//Add Nav Links
+const newFirstA = document.createElement('a');
+const newEndA = document.createElement('a');
+newFirstA.setAttribute('href', '#');
+newFirstA.textContent = 'First';
+newEndA.setAttribute('href', '#');
+newEndA.textContent = 'Last';
+//console.log(newFirstA);
+document.nav.appendChild(newFirstA);
+//console.log(newElement);
 
 // CTA Content
 const ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent['cta']['h1'];
 
-// Still broken
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
 
