@@ -102,8 +102,15 @@ bottomContentThirdP[0].textContent = siteContent['main-content']['vision-content
 const contactH4 = document.querySelector('.contact > h4');
 contactH4.textContent = siteContent['contact']['contact-h4'];
 
-const contactFirstAddress = document.querySelectorAll('.contact:first-child');
-console.log(contactFirstAddress);
-//contactFirstAddress.textContent = siteContent['contact']['contact-address'];
+const contactAddress = document.querySelector('.contact p');
+contactAddress.textContent = siteContent['contact']['address'];
+
+const contactPhone = document.querySelector('p:nth-of-type(2)');
+contactPhone.textContent = siteContent['contact']['phone'];
+
+const contactEmail = document.querySelector('p:nth-of-type(3');
+contactEmail.textContent = siteContent['contact']['email'];
 
 // Footer Content
+const footerContent = document.querySelector('footer');
+footerContent.textContent = siteContent['footer']['copyright'];
