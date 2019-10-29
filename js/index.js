@@ -59,9 +59,12 @@ newFirstA.setAttribute('href', '#');
 newFirstA.textContent = 'First';
 newEndA.setAttribute('href', '#');
 newEndA.textContent = 'Last';
-//console.log(newFirstA);
-document.nav.appendChild(newFirstA);
-//console.log(newElement);
+//THIS IS HOW YOU DO APPEND CHILD
+debugger;
+const navv = document.querySelector('nav');
+navv.appendChild(newFirstA);
+navv.prepend(newEndA);
+//--------------------------
 
 // CTA Content
 const ctaText = document.querySelector('.cta-text h1');
