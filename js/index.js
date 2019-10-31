@@ -40,3 +40,91 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV
+const navLinks = document.querySelectorAll('a');
+let count = 1;
+navLinks.forEach( element => {
+  if (count !== navLinks.length + 1) {
+    element.textContent = siteContent['nav'][`nav-item-${count}`];
+    element.style.color = 'green';
+    count += 1;
+  }
+})
+
+//Add Nav Links
+const newFirstA = document.createElement('a');
+const newEndA = document.createElement('a');
+newFirstA.setAttribute('href', '#');
+newFirstA.textContent = 'First';
+newEndA.setAttribute('href', '#');
+newEndA.textContent = 'Last';
+//THIS IS HOW YOU DO APPEND CHILD
+debugger;
+const navv = document.querySelector('nav');
+navv.appendChild(newFirstA);
+navv.prepend(newEndA);
+//--------------------------
+
+// CTA Content
+const ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = siteContent['cta']['h1'];
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.src = siteContent['cta']['img-src'];
+
+// Main Top Content
+const mainTopFirst = document.querySelector('.top-content div:first-child h4');
+mainTopFirst.textContent = siteContent['main-content']['features-h4'];
+
+const mainTopFirstP = document.querySelector('.top-content div:first-child p');
+mainTopFirstP.textContent = siteContent['main-content']['features-content'];
+
+const mainTopSecond = document.querySelector('.top-content div:last-child h4');
+mainTopSecond.textContent = siteContent['main-content']['about-h4'];
+
+const mainTopSecondP = document.querySelector('.top-content div:last-child p');
+mainTopSecondP.textContent = siteContent['main-content']['about-content'];
+
+const mainImg = document.getElementById('middle-img');
+mainImg.src = siteContent['main-content']['middle-img-src'];
+
+//Main Bottom Content h4's
+const bottomContentFirstH4 = document.querySelectorAll('.bottom-content .text-content:nth-child(1) h4');
+bottomContentFirstH4[0].textContent = siteContent['main-content']['services-h4'];
+
+const bottomContentSecondH4 = document.querySelectorAll('.bottom-content .text-content:nth-child(2) h4');
+bottomContentSecondH4[0].textContent = siteContent['main-content']['product-h4'];
+
+const bottomContentThirdH4 = document.querySelectorAll('.bottom-content .text-content:nth-child(3) h4');
+bottomContentThirdH4[0].textContent = siteContent['main-content']['vision-h4'];
+
+// Main Bottom Content
+const bottomContentFirstP = document.querySelectorAll('.bottom-content .text-content:nth-child(1) p');
+bottomContentFirstP[0].textContent = siteContent['main-content']['services-content'];
+
+const bottomContentSecondP = document.querySelectorAll('.bottom-content .text-content:nth-child(2) p');
+bottomContentSecondP[0].textContent = siteContent['main-content']['product-content'];
+
+const bottomContentThirdP = document.querySelectorAll('.bottom-content .text-content:nth-child(3) p');
+bottomContentThirdP[0].textContent = siteContent['main-content']['vision-content'];
+
+// Contact Content
+const contactH4 = document.querySelector('.contact > h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+const contactAddress = document.querySelector('.contact p');
+contactAddress.textContent = siteContent['contact']['address'];
+
+const contactPhone = document.querySelector('p:nth-of-type(2)');
+contactPhone.textContent = siteContent['contact']['phone'];
+
+const contactEmail = document.querySelector('p:nth-of-type(3');
+contactEmail.textContent = siteContent['contact']['email'];
+
+// Footer Content
+const footerContent = document.querySelector('footer');
+footerContent.textContent = siteContent['footer']['copyright'];
